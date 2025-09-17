@@ -8,9 +8,18 @@ namespace Szoftver
 {
     internal class Program
     {
+        public class Szemely
+        {
+            public string nev = "Nagy Ilona";
+            public int kor = 21;
+
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Szemely szemely = new Szemely();
+            Console.WriteLine("Név: " + szemely.nev);
+            Console.WriteLine("Kor: " + szemely.kor);
+            Console.ReadKey();
         }
     }
 }
