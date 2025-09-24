@@ -14,14 +14,32 @@ namespace Szoftver
             private string _nev;
             private int _kor;
 
-            public Szemely(string nev, int kor)
+            public Szemely(string nev)
             {
                 _nev = nev;
-                _kor = kor;
+                
             }
-            public string kiir()
+            
+            public string Nev
             {
-                return _nev + " " + _kor;
+                get { return _nev; }
+                set { _nev = value; }
+            }
+            public int Kor
+            {
+                get { return _kor; }
+                set 
+                {
+                    if(value >= 0)
+                    {
+                    _kor = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hibás kor!");
+                    }
+                }
+                
             }
         }
         public class BankSzamla
@@ -31,9 +49,9 @@ namespace Szoftver
    
         static void Main(string[] args)
         {
-            Szemely szemely = new Szemely("Kiss Ilona", 44);
-
-            Console.WriteLine(szemely.kiir());
+            Szemely szemely = new Szemely("Kiss Ilona");
+            szemely.Kor = 25;
+            Console.WriteLine(szemely.Nev+" "+szemely.Kor);
 
 
         }
