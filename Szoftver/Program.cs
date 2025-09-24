@@ -41,6 +41,10 @@ namespace Szoftver
                 }
                 
             }
+            public override string ToString()
+            {
+                return $"Név: {_nev}, Kor: {_kor}";
+            }
         }
         public class BankSzamla
         {
@@ -51,7 +55,7 @@ namespace Szoftver
         {
             Szemely szemely = new Szemely("Kiss Ilona");
             szemely.Kor = 25;
-            Console.WriteLine(szemely.Nev+" "+szemely.Kor);
+            Console.WriteLine(szemely);
 
 
         }
