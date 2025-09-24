@@ -1,0 +1,7 @@
+C:\Users\pleszkol\Desktop\Szoftver\Szoftver\bin\Debug\Szoftver.exe.config
+C:\Users\pleszkol\Desktop\Szoftver\Szoftver\bin\Debug\Szoftver.exe
+C:\Users\pleszkol\Desktop\Szoftver\Szoftver\bin\Debug\Szoftver.pdb
+C:\Users\pleszkol\Desktop\Szoftver\Szoftver\obj\Debug\Szoftver.csproj.AssemblyReference.cache
+C:\Users\pleszkol\Desktop\Szoftver\Szoftver\obj\Debug\Szoftver.csproj.CoreCompileInputs.cache
+C:\Users\pleszkol\Desktop\Szoftver\Szoftver\obj\Debug\Szoftver.exe
+C:\Users\pleszkol\Desktop\Szoftver\Szoftver\obj\Debug\Szoftver.pdb
