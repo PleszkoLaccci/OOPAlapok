@@ -108,6 +108,19 @@ namespace Szoftver
 
             }
         }
+        public class Dolgozo : Szemely
+        {
+            private int _ber;
+
+            public Dolgozo(string nev, int kor, int ber) : base(nev, kor)
+            {
+                _ber = ber;
+            }
+            public override string ToString()
+            {
+                return $"{Nev},{Kor}, {_ber}";
+            }
+        }
    
         static void Main(string[] args)
         {
@@ -115,7 +128,7 @@ namespace Szoftver
             Console.WriteLine(szemely);
 
             List <Hallgato> hallgatolista = new List<Hallgato>();
-
+            
             for (int i = 0; i < 2; i++)
             {
                 Console.Write($"Adja meg {i+1} hallgató nevét:");
@@ -131,7 +144,7 @@ namespace Szoftver
 
                 
             }
-
+            
             foreach(Hallgato hallgato in hallgatolista)
             {
                 Console.WriteLine("Neve:" +hallgato.Nev);
@@ -139,7 +152,8 @@ namespace Szoftver
                 Console.WriteLine($"{hallgato.Nev} neptunkódja: "+hallgato.Neptunkod);
 
             }
-
+            Dolgozo dolgozo1 = new Dolgozo("Nagy János", 45, 250000);
+            Console.WriteLine(dolgozo1);
 
         }
     }
