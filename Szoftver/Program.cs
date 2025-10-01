@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics.Tracing;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using static Szoftver.Program;
 
 namespace Szoftver
 {
@@ -94,6 +96,7 @@ namespace Szoftver
                         Console.WriteLine("Hibás neptuknód");
                     }
                 }
+                get { return _neptunkod; }
             }
             public Hallgato(string nev, int kor) : base(nev,kor)
             {
@@ -111,7 +114,32 @@ namespace Szoftver
             Szemely szemely = new Szemely("Kiss Ilona", 33);
             Console.WriteLine(szemely);
 
-            
+            List <Hallgato> hallgatolista = new List<Hallgato>();
+
+            for (int i = 0; i < 2; i++)
+            {
+                Console.Write($"Adja meg {i+1} hallgató nevét:");
+                string nev = Console.ReadLine();
+                Console.Write($"Adja meg {i + 1} hallgató korát:");
+                int kor = int.Parse(Console.ReadLine());
+                Hallgato hallgato = new Hallgato(nev, kor);
+                Console.Write($"Adja meg {i + 1} tanuló neptukódját:");
+                string neptunkod = Console.ReadLine();
+                hallgato.Neptunkod = neptunkod;
+
+                hallgatolista.Add(hallgato);
+
+                
+            }
+
+            foreach(Hallgato hallgato in hallgatolista)
+            {
+                Console.WriteLine("Neve:" +hallgato.Nev);
+                Console.WriteLine($"{hallgato.Nev} kora: " +hallgato.Kor);
+                Console.WriteLine($"{hallgato.Nev} neptunkódja: "+hallgato.Neptunkod);
+
+            }
+
 
         }
     }
