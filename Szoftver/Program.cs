@@ -48,7 +48,32 @@ namespace Szoftver
         }
         public class BankSzamla
         {
-            private string szamlaszam;
+            private uint egyenleg;
+
+            public int Egyenleg
+            {
+                set
+                { 
+                    if(value >=0)
+                    {
+                        egyenleg = (uint)value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hibás egyenleg!");
+                    }
+                }
+            }
+            
+            public void Befizetes(uint osszeg)
+            {
+                egyenleg += osszeg;
+            }
+            public void Kivesz(uint osszeg)
+            {
+                egyenleg -= osszeg;
+            }
+
         }
    
         static void Main(string[] args)
@@ -57,6 +82,7 @@ namespace Szoftver
             szemely.Kor = 25;
             Console.WriteLine(szemely);
 
+            
 
         }
     }
