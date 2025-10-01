@@ -152,7 +152,7 @@ namespace Szoftver
                 Console.WriteLine($"{hallgato.Nev} neptunkódja: "+hallgato.Neptunkod);
 
             }
-            Dolgozo dolgozo1 = new Dolgozo("Nagy János", 45, 250000);
+            Dolgozo dolgozo1 = new Dolgozo("Kunu Márió", 26, 2500000);
             Console.WriteLine(dolgozo1);
 
         }
