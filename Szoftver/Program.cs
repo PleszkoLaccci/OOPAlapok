@@ -11,13 +11,13 @@ namespace Szoftver
     {
         public class Szemely
         {
-            private string _nev;
-            private int _kor;
+            protected string _nev;
+            protected int _kor;
 
-            public Szemely(string nev)
+            public Szemely(string nev, int kor)
             {
                 _nev = nev;
-                
+                _kor = kor;
             }
             
             public string Nev
@@ -75,11 +75,18 @@ namespace Szoftver
             }
 
         }
+        public class Hallgato : Szemely
+        {
+            public string NeptunKod { get; set; }
+            public Hallgato()
+            {
+
+            }
+        }
    
         static void Main(string[] args)
         {
-            Szemely szemely = new Szemely("Kiss Ilona");
-            szemely.Kor = 25;
+            Szemely szemely = new Szemely("Kiss Ilona", 33);
             Console.WriteLine(szemely);
 
             
