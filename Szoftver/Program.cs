@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Globalization;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -79,9 +80,24 @@ namespace Szoftver
         public class Hallgato : Szemely
         {
             private string _neptunkod;
-            public Hallgato(string neptunkod, string nev, int kor) : base(nev,kor)
+
+            public string Neptunkod
             {
-                _neptunkod = neptunkod;
+                set
+                {
+                    if (value.Length <= 6)
+                    {
+                        _neptunkod = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hibás neptuknód");
+                    }
+                }
+            }
+            public Hallgato(string nev, int kor) : base(nev,kor)
+            {
+               
                 _nev = nev;
                 _kor = kor;
                 
